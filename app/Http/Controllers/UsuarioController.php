@@ -90,7 +90,7 @@ class UsuarioController extends Controller
                 'password' => bcrypt($request->password), // bcrypt para criptografar a senha
             ]);
 
-            return response()->json(['message' => 'Usuário registrado com sucesso!', 'data' => $usuario]);
+            return response()->json(['message' => 'Usuário registrado com sucesso'], 201);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Ocorreu um erro durante o processamento da sua requisição.'], 500);
         }
