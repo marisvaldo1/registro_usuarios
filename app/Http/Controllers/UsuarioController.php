@@ -14,7 +14,7 @@ class UsuarioController extends Controller
     {
         try {
             $usuarios = Usuario::all();
-            return response()->json($usuarios, 200);
+            return response()->json(['data' => $usuarios]);            
         } catch (\Exception $e) {
             return response()->json(['error' => 'Ocorreu um erro durante o processamento da sua requisição.'], 500);
         }
@@ -90,7 +90,8 @@ class UsuarioController extends Controller
                 'password' => bcrypt($request->password), // bcrypt para criptografar a senha
             ]);
 
-            return response()->json(['message' => 'Usuário registrado com sucesso'], 201);
+            // return response()->json(['message' => 'Usuário registrado com sucesso'], 201);
+            return response()->json(['message' => 'Usuário registrado com sucesso!', 'data' => $usuario]);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Ocorreu um erro durante o processamento da sua requisição.'], 500);
         }
