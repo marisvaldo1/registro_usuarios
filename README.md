@@ -1,21 +1,11 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-# Desafio
+# Processo seletivo - Desenvolvedor PHP Sênior
 
 ### DOCUMENTAÇÃO
 
 - [Para iniciar](#para-iniciar-o-serviço)
 - [Plataforma para execução do projeto](#plataforma-para-execução-do-projeto)
-- [Design de software](#design-de-software)
 - [Linguagens utilizadas no desenvolvimento](#linguagem)
-- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#Instalação)
 - [Banco de dados](#banco-de-dados)
 - [Observações](#observações)
 
@@ -24,74 +14,66 @@ Essas instruções farão com que você tenha uma cópia do projeto em execuçã
 
 ## Plataforma para execução do projeto
 
-```php
-XAMPP
-```
-Para mais informações clique [aqui](https://www.apachefriends.org/pt_br/index.html) para visitar a documentação oficial do xampp e baixar o servidor
-
-## Design de software
-
-```php
-S O L I D 
+```Browser
+Browser 
+Ferramenta cliente de API REST (Postman ou Insomnia)
 ```
 
 ## Linguagem
 
 ```php
-PHP 7.4.2
+PHP 8.2.1
+Laravel 10.8.0
 JavaScript
 CSS
 
 bibliotecas
-jQuery (3.6.0)
-Bootstrap (3.4.1)
-font-awesome
-
+jQuery
+Bootstrap
 ```
 
-## Pré-requisitos
+## Instalação
 
-```php
-Fazer download do Xampp versão Windows (64 bits) nesse endereço clique [aqui](https://www.apachefriends.org/pt_br/download.html)
-Instalar e executar o Xampp
-Start no apache 
-Start no MySql
+```Clonar o projeto em 
+https://github.com/marisvaldo1/registro_usuarios.git
 
-Entar no diretório onde foi instalado o Xampp e entrar na pasta htdocs
-Clonar o projecto dentro desse diretório e será criado o diretório xampp/htdocs/desafio onde todos os arquivos do projeto serão colocados.
+pelo terminal executar 
+    - composer install
+    - criar o banco de dados manualmente
+rodar as migrations para a criação das tabelas 
+    - php artisan migrate
+Iniciar o servidor 
+    - php artisan serve
 
-Baixar o composer para Windows nesse link [aqui](https://getcomposer.org/Composer-Setup.exe)
+Para executar o projeto web entrar no link
+- http://localhost:8000/
 
-Para instalar as dependência do projeto
-Instalar o composer para Windows
-Executar o composer install
+Para efetuar os testes
+- php artisan test
+
+Para executar a API pelo insomnia
+- chamar o endereço localhost:8000/api/usuarios com o método POST
+  colocando os dados como json e passando por exemplo os valores abaixo
+
+  {
+    "name": "Marisvaldo G",
+    "email": "marisvaldo@gmail.com",
+    "password": "123456",
+    "password_confirmation": "123456"
+}
+
 ```
 
 ## Banco de dados
-</br>Tipo de servidor: MariaDB
-</br>Versão do servidor: 10.4.19-MariaDB - mariadb.org binary distribution
-</br>Versão do protocolo: 10
-</br>Conjunto de caracteres do servidor: UTF-8 Unicode (utf8mb4)
-</br></br>
-As configurações do banco de dados estão no arquivo desafio/config/MySql.php
+</br>Tipo de servidor: PostgreSQL
+As configurações do banco de dados estão no arquivo .env abaixo
 <br>
-</br>O Script do banco de dados está no arquivo desafio/App/docs/scriptDataBase.sql
 
-```php
-DB_CONNECTION=mysql
-DB_HOST=local
-DB_PORT=3306
-DB_DATABASE=desafio
-DB_USERNAME=root
-DB_PASSWORD=
+```.env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=FirstDecision
+DB_USERNAME=usuario
+DB_PASSWORD=senha
 ```
-
-## Observações
-
-<b>
-- Muitos melhoramentos foram deixados de fora por conta do prazo<br>
-- A opção de inclusão de imagem foi parcialmente feita porém não foi finalizada também por conta do prazo</br>
-- A inserção da categoria no produto não concluída (tabelas criadas no banco), a tabela associativa 1-N não está sendo atualizada.</br>
-- Se for detectado algum problema que impeça execução, por favor entre em contato comigo para que eu faça os ajustes necessários</br>
-- Ficou faltando a padronização do idioma no desenvolvimento. Pode ser resolvido com futuros ajustes caso haja necessidade didática.</br>
-</b>
