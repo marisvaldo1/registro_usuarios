@@ -44,7 +44,7 @@ class UsuarioController extends Controller
 
             $validator = Validator::make($request->all(), [
                 'name' => 'string|min:3|max:50',
-                'email' => 'email|unique:usuarios,email',
+                'email' => 'email|required:usuarios,email',
                 'password' => 'string|min:6|max:20|confirmed',
             ]);
 
@@ -90,7 +90,6 @@ class UsuarioController extends Controller
                 'password' => bcrypt($request->password), // bcrypt para criptografar a senha
             ]);
 
-            // return response()->json(['message' => 'Usuário registrado com sucesso'], 201);
             return response()->json(['message' => 'Usuário registrado com sucesso!', 'data' => $usuario]);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Ocorreu um erro durante o processamento da sua requisição.'], 500);
