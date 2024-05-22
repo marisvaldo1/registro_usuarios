@@ -7,60 +7,91 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Desafio
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### DOCUMENTAÇÃO
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Para iniciar](#para-iniciar-o-serviço)
+- [Plataforma para execução do projeto](#plataforma-para-execução-do-projeto)
+- [Design de software](#design-de-software)
+- [Linguagens utilizadas no desenvolvimento](#linguagem)
+- [Pré-requisitos](#pré-requisitos)
+- [Banco de dados](#banco-de-dados)
+- [Observações](#observações)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Para iniciar o serviço 
+Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
 
-## Learning Laravel
+## Plataforma para execução do projeto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```php
+XAMPP
+```
+Para mais informações clique [aqui](https://www.apachefriends.org/pt_br/index.html) para visitar a documentação oficial do xampp e baixar o servidor
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Design de software
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```php
+S O L I D 
+```
 
-## Laravel Sponsors
+## Linguagem
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```php
+PHP 7.4.2
+JavaScript
+CSS
 
-### Premium Partners
+bibliotecas
+jQuery (3.6.0)
+Bootstrap (3.4.1)
+font-awesome
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+```
 
-## Contributing
+## Pré-requisitos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```php
+Fazer download do Xampp versão Windows (64 bits) nesse endereço clique [aqui](https://www.apachefriends.org/pt_br/download.html)
+Instalar e executar o Xampp
+Start no apache 
+Start no MySql
 
-## Code of Conduct
+Entar no diretório onde foi instalado o Xampp e entrar na pasta htdocs
+Clonar o projecto dentro desse diretório e será criado o diretório xampp/htdocs/desafio onde todos os arquivos do projeto serão colocados.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Baixar o composer para Windows nesse link [aqui](https://getcomposer.org/Composer-Setup.exe)
 
-## Security Vulnerabilities
+Para instalar as dependência do projeto
+Instalar o composer para Windows
+Executar o composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Banco de dados
+</br>Tipo de servidor: MariaDB
+</br>Versão do servidor: 10.4.19-MariaDB - mariadb.org binary distribution
+</br>Versão do protocolo: 10
+</br>Conjunto de caracteres do servidor: UTF-8 Unicode (utf8mb4)
+</br></br>
+As configurações do banco de dados estão no arquivo desafio/config/MySql.php
+<br>
+</br>O Script do banco de dados está no arquivo desafio/App/docs/scriptDataBase.sql
 
-## License
+```php
+DB_CONNECTION=mysql
+DB_HOST=local
+DB_PORT=3306
+DB_DATABASE=desafio
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Observações
+
+<b>
+- Muitos melhoramentos foram deixados de fora por conta do prazo<br>
+- A opção de inclusão de imagem foi parcialmente feita porém não foi finalizada também por conta do prazo</br>
+- A inserção da categoria no produto não concluída (tabelas criadas no banco), a tabela associativa 1-N não está sendo atualizada.</br>
+- Se for detectado algum problema que impeça execução, por favor entre em contato comigo para que eu faça os ajustes necessários</br>
+- Ficou faltando a padronização do idioma no desenvolvimento. Pode ser resolvido com futuros ajustes caso haja necessidade didática.</br>
+</b>
